@@ -1,0 +1,12 @@
+<%= form_for(@link) do |f| %>
+  <div class="field">
+    <%= f.label :long_url %>
+    <%= f.text_field :longURL %>
+  </div>
+  <div class="field">
+  <%= f.hidden_field :shortURL, value: @shortURL%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
