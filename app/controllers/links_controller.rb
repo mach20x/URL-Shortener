@@ -15,6 +15,10 @@ class LinksController < ApplicationController
     #   redirect_to @link.longURL
     # end
 
+    def index
+      @links = Link.all
+    end
+
     def new
       @link = Link.new
     end
@@ -22,7 +26,7 @@ class LinksController < ApplicationController
     def create
       @link = Link.new(link_params)
       if @link.save
-        redirect_to link_index_path, notice: 'Link shortened!'
+        redirect_to links_path, notice: 'Link shortened!'
       else
         render :new
       end

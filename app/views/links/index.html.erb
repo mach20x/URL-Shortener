@@ -11,11 +11,11 @@
   </thead>
 
   <tbody>
-  <% @links.each do |url| %>
+  <% @links.map do |url| %>
       <tr>
-        <td><%= link.id %></td>
-        <td><%= link.longURL %></td>
-        <td><%= link.shortURL %></td>
+        <td><%= url.id %></td>
+        <td><%= url.longURL %></td>
+        <td><%= url.shortURL %></td>
       </tr>
     <% end %>
   </tbody>
