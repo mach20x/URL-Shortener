@@ -5,17 +5,15 @@
     <tr>
       <th>ID</th>
       <th>Original</th>
-      <th>Shortened URL</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-  <% @links.map do |url| %>
+  <% @link.each do |url| %>
       <tr>
         <td><%= url.id %></td>
         <td><%= url.longURL %></td>
-        <td><%= url.shortURL %></td>
       </tr>
     <% end %>
   </tbody>

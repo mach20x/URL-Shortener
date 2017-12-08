@@ -15,9 +15,6 @@ class LinksController < ApplicationController
     #   redirect_to @link.longURL
     # end
 
-    def index
-      @links = Link.all
-    end
 
     def new
       @link = Link.new
